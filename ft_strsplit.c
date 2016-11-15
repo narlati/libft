@@ -6,7 +6,7 @@
 /*   By: narlati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 11:50:06 by narlati           #+#    #+#             */
-/*   Updated: 2016/11/11 15:54:31 by narlati          ###   ########.fr       */
+/*   Updated: 2016/11/13 11:45:12 by narlati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ static char		*ft_strdup_c(const char *s, char c)
 	while (*s != '\0' && *s != c)
 		*s1++ = *s++;
 	*s1 = '\0';
-	ft_putstr(s1_return);
 	return (s1_return);
 }
 
@@ -72,8 +71,6 @@ char			**ft_strsplit(char const *s, char c)
 	char	**result;
 	int		nb;
 
-	ft_putstr(s);
-	ft_putnbr(ft_word_count(s, c));
 	nb = ft_word_count(s, c);
 	if (!(result = (char **)malloc(sizeof(char *) * (nb + 1))))
 		return (NULL);
